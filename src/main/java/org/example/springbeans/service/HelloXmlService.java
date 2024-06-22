@@ -1,8 +1,13 @@
 package org.example.springbeans.service;
 
-public class HelloXmlService {
+import lombok.Setter;
 
-    public String hello(){
-        return "Hello from xml!";
+@Setter
+public class HelloXmlService {
+    private UtilService utilService;
+
+
+    public String hello() {
+        return utilService.append("Hello from xml!");
     }
 }
